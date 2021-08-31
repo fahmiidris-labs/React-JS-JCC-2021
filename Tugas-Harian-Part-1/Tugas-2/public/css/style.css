@@ -12,6 +12,7 @@ header {
     background-color: white;
     padding: 10px;
     width: 100%;
+    top: 0;
 }
 
 nav {
@@ -31,31 +32,25 @@ nav ul a {
 }
 
 section {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    background-color: white;
+    margin: 100px;
 }
 
-section .box {
-    background: white;
-    margin-right: 150px;
-    margin-left: 150px;
-}
-
-section .box h1 {
+section h1 {
     text-align: center;
     padding-top: 50px;
 }
 
-section .box #article-list {
+section #article-list {
     padding: 30px;
 }
 
-section .box #article-list div {
+section #article-list div {
     padding-top: 30px;
     border-bottom: 1px solid gray;
 }
 
-section .box #article-list div a {
+section #article-list div a {
     padding-top: 30px;
     text-decoration: none;
 }
