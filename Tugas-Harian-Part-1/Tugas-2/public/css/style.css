@@ -1,0 +1,71 @@
+body {
+    background-image: url('../img/pattern.jpg');
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    z-index: 999999;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    padding-right: 40px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: start;
+}
+
+nav ul a {
+    padding-left: 10px;
+    text-decoration: none;
+}
+
+section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+section .box {
+    background: white;
+    margin-right: 150px;
+    margin-left: 150px;
+}
+
+section .box h1 {
+    text-align: center;
+    padding-top: 50px;
+}
+
+section .box #article-list {
+    padding: 30px;
+}
+
+section .box #article-list div {
+    padding-top: 30px;
+    border-bottom: 1px solid gray;
+}
+
+section .box #article-list div a {
+    padding-top: 30px;
+    text-decoration: none;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+ }
