@@ -1,17 +1,21 @@
 console.log("\n===== Soal 1 =====");
 // Soal 1
 console.log("LOOPING PERTAMA");
-var angka = 2;
+var angka = 1;
 while (angka <= 20) {
-    console.log(angka + " - I love coding");
-    angka += 2
+    if (angka % 2 === 0) {
+        console.log(angka + " - I love coding");
+    }
+    angka += 1
 }
 
 console.log("LOOPING KEDUA");
 var angka2 = 20;
 while (angka2 > 0) {
-    console.log(angka2 + " - I will become a frontend developer");
-    angka2 -= 2
+    if (angka2 % 2 === 0) {
+        console.log(angka2 + " - I will become a frontend developer");
+    }
+    angka2 -= 1
 }
 
 
@@ -20,8 +24,8 @@ while (angka2 > 0) {
 console.log("\n===== Soal 2 =====");
 // Soal 2
 for (var i = 1; i <= 20; i++) {
-    if (i % 2 != 0) {
-        if (i % 3 == 0) {
+    if (i % 2 !== 0) {
+        if (i % 3 === 0) {
             console.log(i + " - I Love Coding");
         } else {
             console.log(i + " - Santai");
