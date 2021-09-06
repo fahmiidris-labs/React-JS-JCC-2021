@@ -70,11 +70,12 @@ let phone = {
     colors: ["Mystic Bronze", "Mystic White", "Mystic Black"]
 }
 
-const { name, brand, year, colors } = phone
-const phoneBrand = brand
-const phoneName = name
-const colorBlack = colors[2]
-const colorBronze = colors[0]
+const { 
+    name: phoneName,
+    brand: phoneBrand,
+    year,
+    colors: [colorBronze, colorWhite, colorBlack]
+} = phone
 
 console.log(phoneBrand, phoneName, year, colorBlack, colorBronze)
 
