@@ -4,9 +4,25 @@ console.log("===== Release 0 =====")
 
 class Animal {
     constructor(name) {
-        this.name = name
-        this.legs = 4
-        this.cold_blooded = false
+        this._name = name
+        this._legs = 4
+        this._cold_blooded = false
+    }
+
+    get name() {
+        return this._name
+    }
+
+    get legs() {
+        return this._legs
+    }
+
+    set legs(x) {
+        this._legs = x
+    }
+
+    get cold_blooded() {
+        return this._cold_blooded
     }
 }
 
@@ -21,14 +37,21 @@ console.log(sheep.legs)
 
 
 console.log("\n===== Release 1 =====")
-
 class Ape extends Animal {
+    constructor(name) {
+        super(name)
+    }
+
     yell() {
         console.log("Auooo")
     }
 }
 
 class Frog extends Animal {
+    constructor(name) {
+        super(name)
+    }
+
     jump() {
         console.log("hop hop")
     }
@@ -55,8 +78,8 @@ console.log("\n===== Soal 2 =====")
 
 class Clock {
     constructor({ template }) {
-        this.timer = null
-        this.template = template
+        this._timer = null
+        this._template = template
     }
 
     render() {
@@ -71,7 +94,7 @@ class Clock {
         var secs = date.getSeconds()
         if (secs < 10) secs = '0' + secs
 
-        var output = this.template
+        var output = this._template
             .replace('h', hours)
             .replace('m', mins)
             .replace('s', secs)
@@ -80,12 +103,12 @@ class Clock {
     }
 
     stop() {
-        clearInterval(this.timer)
+        clearInterval(this._timer)
     }
 
     start() {
         this.render()
-        this.timer = setInterval(() => {
+        this._timer = setInterval(() => {
             this.render()
         }, 1000)
     }
