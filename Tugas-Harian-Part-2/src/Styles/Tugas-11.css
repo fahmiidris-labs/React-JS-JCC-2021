@@ -70,13 +70,80 @@ table tr:hover td {
     background: -moz-linear-gradient(top, #f2f2f2, #f0f0f0);
 }
 
-.form {
-    border: 1px solid #666;
-    padding: 40px;
+form {
+	margin: 0 auto 0 auto;
+	padding-bottom: 30px;
+	width: 400px;
+	overflow: hidden;
+	background: white;
+	border-radius: 10px;
 }
 
-.input-group {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 15px;
+form label {
+	font-size: 14px;
+	color: darkgray;
+	cursor: pointer;
+}
+
+form label,
+form input {
+	float: left;
+	clear: both;
+}
+
+form input {
+	margin: 15px 0;
+	padding: 15px 10px;
+	width: 100%;
+	outline: none;
+	border: 1px solid #bbb;
+	border-radius: 20px;
+	display: inline-block;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+    -webkit-transition: 0.2s ease all;
+	   -moz-transition: 0.2s ease all;
+	    -ms-transition: 0.2s ease all;
+	     -o-transition: 0.2s ease all;
+	        transition: 0.2s ease all;
+}
+
+form input[type=text]:focus,
+form input[type="password"]:focus {
+	border-color: cornflowerblue;
+}
+
+.btn-edit {
+    padding: 8px 20px;
+    margin-right: 10px;
+	width: auto;
+	background: lightseagreen;
+	border: none;
+	color: black;
+	cursor: pointer;
+	display: inline-block;
+	clear: right;
+}
+
+.btn-delete {
+    padding: 8px 20px;
+	width: auto;
+	background: red;
+	border: none;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	clear: right;
+}
+
+.btn-submit {
+    padding: 15px 50px;
+	width: auto;
+	background: #1abc9c;
+	border: none;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	clear: right;
 }

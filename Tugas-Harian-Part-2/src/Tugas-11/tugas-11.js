@@ -44,14 +44,14 @@ const Tugas11 = () => {
         setCurrentIndex(-1)
     }
 
-    const onDeleteHandle = (event) => {
+    const onDeleteHandle = async (event) => {
         let index = parseInt(event.target.value)
         let deletedItem = buah[index]
         let newData = buah.filter((e) => { return e !== deletedItem })
         setBuah(newData)
     }
 
-    const onEditHandle = (event) => {
+    const onEditHandle = async (event) => {
         let index = parseInt(event.target.value)
         let edit = buah[index]
         setCredentials(edit)
@@ -84,10 +84,10 @@ const Tugas11 = () => {
                                 <td>{data.beratTotal / 1000} Kg</td>
                                 <td>Rp.{data.hargaTotal / (data.beratTotal / 1000)}</td>
                                 <td>
-                                    <button type="button" onClick={onEditHandle} value={index}>
+                                    <button type="button" className="btn-edit" onClick={onEditHandle} value={index}>
                                         Edit
                                     </button>
-                                    <button type="button" onClick={onDeleteHandle} value={index}>
+                                    <button type="button" className="btn-delete" onClick={onDeleteHandle} value={index}>
                                         Hapus
                                     </button>
                                 </td>
@@ -102,24 +102,21 @@ const Tugas11 = () => {
                 <h2 align="center">
                     Form Daftar Harga Buah
                 </h2>
-                <form onSubmit={onSubmitHandle} className="form">
-                    <div className="input-group">
-                        <label htmlFor="nama">Nama</label>
-                        <input id="nama" type="text" name="nama" value={credentials.nama} onChange={onHandleChange} required />
-                    </div>
-                    <div className="input-group">
-                        <label htmlFor="hargaTotal">Harga Total</label>
-                        <input id="hargaTotal" type="text" name="hargaTotal" value={credentials.hargaTotal} onChange={onHandleChange} required />
-                    </div>
+                <form onSubmit={onSubmitHandle}>
 
-                    <div className="input-group">
-                        <label htmlFor="beratTotal">Berat Total (dalam satuan gram)</label>
-                        <input id="beratTotal" type="number" name="beratTotal" value={credentials.beratTotal} onChange={onHandleChange} required min={2000} />
-                    </div>
+                    <label htmlFor="nama">Nama</label>
+                    <input id="nama" type="text" name="nama" value={credentials.nama} onChange={onHandleChange} required />
 
-                    <button type="submit">
+                    <label htmlFor="hargaTotal">Harga Total</label>
+                    <input id="hargaTotal" type="text" name="hargaTotal" value={credentials.hargaTotal} onChange={onHandleChange} required />
+
+                    <label htmlFor="beratTotal">Berat Total (dalam satuan gram)</label>
+                    <input id="beratTotal" type="number" name="beratTotal" value={credentials.beratTotal} onChange={onHandleChange} required min={2000} />
+
+                    <button type="submit" className="btn-submit">
                         Submit
                     </button>
+
                 </form>
             </div>
         </div>
