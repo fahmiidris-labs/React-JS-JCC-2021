@@ -1,0 +1,50 @@
+.box-app {
+    background-color: #ffffff;
+    padding-top: 80px;
+}
+
+.box-app nav {
+    border-bottom: 1px solid rgb(202, 202, 202);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.box-app nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding-inline-start: 0;
+}
+
+.box-app nav ul li {
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    cursor: pointer;
+}
+
+.box-app nav ul li:hover {
+    background-color: rgb(196, 196, 196);
+}
+
+.box-app nav ul li a {
+    color: inherit;
+}
+
+.box-app nav.dark {
+    background-color: black;
+    color: white;
+}
+
+.box-app nav.light {
+    background-color: white;
+    color: black;
+}

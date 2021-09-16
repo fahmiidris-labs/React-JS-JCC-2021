@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom'
 import './Styles/index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
+import { ScoreProvider } from './Tugas-14/scoreProvider'
 
 ReactDOM.render(
     <React.StrictMode>
-        <App />
+        <ScoreProvider>
+            <App />
+        </ScoreProvider>
     </React.StrictMode>,
     document.getElementById('root')
 )
