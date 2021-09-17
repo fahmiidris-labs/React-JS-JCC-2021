@@ -64,7 +64,7 @@ const Tugas11 = () => {
                 <h2 align="center">
                     Daftar Harga Buah
                 </h2>
-                <table className="products-table">
+                <table className="products-table table-sendiri">
                     <thead>
                         <tr>
                             <th>No</th>

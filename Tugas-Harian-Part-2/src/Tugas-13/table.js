@@ -36,7 +36,7 @@ const Table = () => {
     return (
         <>
             <h1 align="center">Daftar Nilai Mahasiswa</h1>
-            <table className="table">
+            <table className="table table-sendiri">
                 <thead>
                     <tr>
                         <th>No</th>

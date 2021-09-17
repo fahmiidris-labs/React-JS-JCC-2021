@@ -42,7 +42,7 @@ const Table = () => {
             <Link to="/tugas-14/create">
                 <button type="button">Buat data nilai mahasiswa baru</button>
             </Link>
-            <table className="table" style={{ "marginTop": "10px" }}>
+            <table className="table table-sendiri" style={{ "marginTop": "10px" }}>
                 <thead>
                     <tr>
                         <th>No</th>

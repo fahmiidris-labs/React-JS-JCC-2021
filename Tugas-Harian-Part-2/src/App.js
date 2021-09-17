@@ -14,8 +14,11 @@ import Tugas12 from "./Tugas-12/tugas-12"
 import Tugas13 from "./Tugas-13/tugas-13"
 import Tugas14 from "./Tugas-14/tugas-14"
 import Form from "./Tugas-14/form";
-import { ThemeProvider } from "./Tugas-14/themeProvider";
-import Nav from "./Tugas-14/nav";
+
+import { ThemeProvider } from "./Tugas-15/themeProvider";
+import Nav from "./Tugas-15/nav";
+import Tugas15 from "./Tugas-15/tugas-15";
+import Form5 from "./Tugas-15/form";
 
 const App = () => {
 
@@ -26,8 +29,6 @@ const App = () => {
                     <Nav />
                 </ThemeProvider>
 
-                {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
                 <Switch>
                     <Route path="/" exact>
                         <Tugas9 />
@@ -52,6 +53,15 @@ const App = () => {
                     </Route>
                     <Route path="/tugas-14/edit/:id">
                         <Form />
+                    </Route>
+                    <Route path="/tugas-15" exact>
+                        <Tugas15 />
+                    </Route>
+                    <Route path="/tugas-15/create">
+                        <Form5 />
+                    </Route>
+                    <Route path="/tugas-15/edit/:id">
+                        <Form5 />
                     </Route>
                 </Switch>
             </div>
